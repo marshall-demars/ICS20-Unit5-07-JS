@@ -39,9 +39,12 @@ function myButtonClicked() {
 
     // process and output
   var total = 0;
-  
-  for (let counter = 0; counter <= firstInteger; counter ++) {
-     total += counter;
+  if (firstInteger < 0) {
+    document.getElementById("loop").innerHTML = 'Please input a positive number.'
+  } else {
+    for (let counter = 0; counter <= firstInteger; counter ++) {
+       total += counter;
+    }
   }
   document.getElementById("loop").innerHTML = "The number is " + (total)
 }
